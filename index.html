@@ -1,1 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Card</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Baloo+2:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome for Social Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    /* Background with smooth gradient animation */
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(270deg, #ff6b6b, #f94d6a, #4facfe, #00f2fe);
+      background-size: 800% 800%;
+      animation: gradientBG 12s ease infinite;
+    }
+
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Profile Card */
+    .card {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 25px;
+      text-align: center;
+      width: 380px;
+      max-width: 100%;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    .card img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 4px solid #f94d6a;
+    }
+
+    .card h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.4rem;
+      margin: 0.5rem 0;
+      color: #222;
+    }
+
+    .card p {
+      font-family: 'Baloo 2', cursive;
+      font-size: 1.1rem;
+      color: #444;
+      margin: 0.5rem 0 1.8rem;
+    }
+
+    .card button {
+      background: linear-gradient(45deg, #ff6b6b, #f94d6a);
+      color: #fff;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: transform 0.3s ease, background 0.3s ease;
+      margin-bottom: 1rem;
+    }
+
+    .card button:hover {
+      background: linear-gradient(45deg, #f94d6a, #ff6b6b);
+      transform: scale(1.1);
+    }
+
+    /* Social Buttons */
+    .social-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 1rem;
+    }
+
+    .social-buttons a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      border-radius: 25px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: none;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .social-buttons a i {
+      margin-right: 8px;
+    }
+
+    .social-buttons a:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    .github-btn {
+      background: #333;
+    }
+
+    .linkedin-btn {
+      background: #0077b5;
+    }
+
+    .instagram-btn {
+      background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    }
+
+    /* Responsive for Mobile */
+    @media (max-width: 500px) {
+      .card {
+        width: 90%;
+        padding: 2rem;
+      }
+
+      .card img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .card h1 {
+        font-size: 2rem;
+      }
+
+      .card p {
+        font-size: 1rem;
+      }
+
+      .card button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+
+      .social-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .social-buttons a {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card">
+    <img src="WhatsApp Image 2025-08-13 at 15.19.45.jpeg" alt="Profile Picture">
+    <h1>Sanskriti Suhani</h1>
+    <p>FullStack Developer · Coffee · Photography · Foodie</p>
+    <button>Follow</button>
+
+    <!-- Social Buttons -->
+    <div class="social-buttons">
+      <a href="https://github.com/suhanisanskriti28-oss" class="github-btn"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/sanskriti-suhani-657663278/" class="linkedin-btn"><i
+          class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://www.instagram.com/euphoric.snaps" class="instagram-btn"><i class="fab fa-instagram"></i>
+        Instagram</a>
+    </div>
+  </div>
+</body>
+
+</html>
